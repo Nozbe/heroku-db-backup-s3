@@ -10,17 +10,17 @@ heroku buildpacks:add https://github.com/plymouthsoftware/heroku-db-backup-s3 --
 
 ### Configure environment variables
 ```
-heroku config:add DB_BACKUP_AWS_ACCESS_KEY_ID=someaccesskey --app <your_app>
-heroku config:add DB_BACKUP_AWS_SECRET_ACCESS_KEY=supermegasecret --app <your_app>
-heroku config:add DB_BACKUP_AWS_DEFAULT_REGION=eu-central-1 --app <your_app>
-heroku config:add DB_BACKUP_S3_BUCKET_PATH=your-bucket --app <your_app>
-heroku config:add DB_BACKUP_ENC_KEY=somethingverysecret --app <your_app>
+$ heroku config:add DB_BACKUP_AWS_ACCESS_KEY_ID=someaccesskey --app <your_app>
+$ heroku config:add DB_BACKUP_AWS_SECRET_ACCESS_KEY=supermegasecret --app <your_app>
+$ heroku config:add DB_BACKUP_AWS_DEFAULT_REGION=eu-central-1 --app <your_app>
+$ heroku config:add DB_BACKUP_S3_BUCKET_PATH=your-bucket --app <your_app>
+$ heroku config:add DB_BACKUP_ENC_KEY=somethingverysecret --app <your_app>
 ```
 - In future release (maybe) will use heroku-toolbelt
 ```
-heroku config:add HEROKU_TOOLBELT_APP=<your_app> --app <your_app>
-heroku config:add HEROKU_TOOLBELT_API_EMAIL=sss --app <your_app>
-heroku config:add HEROKU_TOOLBELT_API_PASSWORD=ddd --app <your_app>
+$ heroku config:add HEROKU_TOOLBELT_APP=<your_app> --app <your_app>
+$ heroku config:add HEROKU_TOOLBELT_API_EMAIL=sss --app <your_app>
+$ heroku config:add HEROKU_TOOLBELT_API_PASSWORD=ddd --app <your_app>
 ```
 For Postgres:
 
@@ -28,10 +28,12 @@ Go to settings page of your Heroku application and add Config Var `DBURL_FOR_BAC
 
 For MySQL:
 
-heroku config:add DB_BACKUP_HOST=your-db-host --app <your_app>
-heroku config:add DB_BACKUP_USER=your-db-user --app <your_app>
-heroku config:add DB_BACKUP_PASSWORD=your-db-password --app <your_app>
-heroku config:add DB_BACKUP_DATABASE=your-db-name --app <your_app>
+```
+$ heroku config:add DB_BACKUP_HOST=your-db-host --app <your_app>
+$ heroku config:add DB_BACKUP_USER=your-db-user --app <your_app>
+$ heroku config:add DB_BACKUP_PASSWORD=your-db-password --app <your_app>
+$ heroku config:add DB_BACKUP_DATABASE=your-db-name --app <your_app>
+```
 
 ### Scheduler
 Add addon scheduler to your app.
